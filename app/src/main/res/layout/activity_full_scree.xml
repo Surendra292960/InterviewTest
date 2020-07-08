@@ -12,9 +12,6 @@
             name="imageUrl"
             type="String" />
 
-        <variable
-            name="itemClickListener"
-            type="com.example.test.util.CustomClickListener" />
     </data>
 
     <LinearLayout
