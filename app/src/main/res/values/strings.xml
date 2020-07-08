@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SampleTest</string>
+    <string name="appbar_scrolling_view_behavior"><![CDATA[<string name=\"appbar_scrolling_view_behavior\" translatable=\"false\">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>]]></string>
+    <string name="ok">ok</string>
+    <string name="check_connection">Please Check Your Internet Connection and try again</string>
+    <string name="no_internet">Please Check Your Internet Connection</string>
+</resources>

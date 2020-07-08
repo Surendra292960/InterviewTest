@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="hit"
+            type="com.example.test.model.Hit" />
+
+        <variable
+            name="imageUrl"
+            type="String" />
+
+        <variable
+            name="itemClickListener"
+            type="com.example.test.util.CustomClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="15dp"
+        android:onClick="@{() -> itemClickListener.cardClicked(hit)}"
+        android:layout_marginRight="15dp"
+        android:background="#ffffff">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:paddingBottom="20dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_gravity="center_vertical"
+                android:foregroundGravity="center"
+                android:scaleType="fitXY"
+                bind:imageUrl="@{hit.imageUrl()}" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{hit.user}"
+                android:textSize="14sp"
+                android:textColor="#ef4e33" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
